@@ -2,7 +2,7 @@
 
 (In other words, no Tailwind CSS to deal with.)
 
-These are the default Laravel views (using a Laravel Breeze installation) with all TailWind styles and superfluous HTML removed. Everything is ready for you to start styling!
+These are the default Laravel views (using a Laravel Breeze installation) with all TailWind styles and superfluous HTML removed. No CSS is supplied at all. Everything is ready for you to start styling!
 
 ## Installation
 
