@@ -12,6 +12,7 @@ Note: Don't forget to remove TailWind from your `webpack.mix.js` configuration. 
 
 For example:
 
+```javascript
   mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .browserSync({
@@ -20,5 +21,5 @@ For example:
     })
     .disableNotifications()
     .version();
-
+```
 )
