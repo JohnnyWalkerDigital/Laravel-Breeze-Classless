@@ -6,7 +6,7 @@ These are the default Laravel views (using a Laravel Breeze installation) with a
 
 ## Installation
 
-Simply overwrite your views/ folder with these files.
+Simply overwrite your `resources/views` folder in a fresh Laravel installation with the one supplied here. You will be good to go!
 
 Note: Don't forget to remove TailWind from your `webpack.mix.js` configuration. (You will most likely want to replace `.postCSS()` in your webpack.mix.js file with `.sass()`.
 
