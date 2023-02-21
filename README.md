@@ -4,6 +4,8 @@
 
 These are the default Laravel views (using a Laravel Breeze installation) with all TailWind styles and superfluous HTML removed. No CSS is supplied at all. Everything is ready for you to start styling!
 
+Updated for Laravel 9/10 with Vite
+
 ## Installation
 
 Simply overwrite your `resources/views` folder in a fresh Laravel installation with the one supplied here. You will be good to go!
