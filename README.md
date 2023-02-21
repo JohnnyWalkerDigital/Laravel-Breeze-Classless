@@ -12,7 +12,8 @@ Simply overwrite your `resources/views` folder in a fresh Laravel installation w
 
 Note: Don't forget to remove the TailWind imports from your `resources/app.scss`. 
 
-Webpack users: If you're using Webpack, remove Tailwind from your `webpack.mix.js` configuration. You will most likely want to replace `.postCSS()` in your webpack.mix.js file with `.sass()`.
+### Webpack users
+If you're using Webpack, remove Tailwind from your `webpack.mix.js` configuration. You will most likely want to replace `.postCSS()` in your webpack.mix.js file with `.sass()`.
 
 For example:
 
