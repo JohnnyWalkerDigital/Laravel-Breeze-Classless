@@ -1,16 +1,18 @@
 # Laravel Breeze without Classes
 
-(In other words, no Tailwind CSS to deal with.)
+(In other words, no Tailwind classes to deal with.)
 
-These are the default Laravel views (using a Laravel Breeze installation) with all TailWind styles and superfluous HTML removed. No CSS is supplied at all. Everything is ready for you to start styling!
+These are the default Laravel views (using a fresh Laravel Breeze installation) with all TailWind styles and superfluous HTML removed. No CSS is supplied at all. Everything is stripped bare and ready for you to start styling!
 
-Updated for Laravel 9/10 with Vite
+Supports Laravel 9 / 10 with Vite
 
 ## Installation
 
 Simply overwrite your `resources/views` folder in a fresh Laravel installation with the one supplied here. You will be good to go!
 
-Note: Don't forget to remove TailWind from your `webpack.mix.js` configuration. You will most likely want to replace `.postCSS()` in your webpack.mix.js file with `.sass()`.
+Note: Don't forget to remove the TailWind imports from your `resources/app.scss`. 
+
+Webpack users: If you're using Webpack, remove Tailwind from your `webpack.mix.js` configuration. You will most likely want to replace `.postCSS()` in your webpack.mix.js file with `.sass()`.
 
 For example:
 

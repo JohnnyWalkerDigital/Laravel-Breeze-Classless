@@ -1,5 +1,6 @@
 @component('layouts.guest')
     @component('components.auth-card')
+        <h1>{{ __('Verify email') }}</h1>
 
         <div>
             {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
@@ -11,15 +12,12 @@
             </div>
         @endif
 
-
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
 
-                <div>
-                    <button>
-                        {{ __('Resend Verification Email') }}
-                    </button>
-                </div>
+                <button>
+                    {{ __('Resend Verification Email') }}
+                </button>
             </form>
 
             <form method="POST" action="{{ route('logout') }}">

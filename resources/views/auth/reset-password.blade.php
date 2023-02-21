@@ -1,6 +1,8 @@
 @component('layouts.guest')
     @component('components.auth-card')
 
+        {{ __('Reset password') }}
+
         <!-- Validation Errors -->
         @include('includes.auth-validation-errors')
 
@@ -12,32 +14,29 @@
 
             <!-- Email Address -->
             <div>
-                <label for="email">{{ __('Email') }}</label>
-
-                <input id="email" type="email" name="email" value="{{ old('email', $request->email) }}" required autofocus>
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" type="email" name="email"
+                              value="{{ old('email', $request->email) }}" required autofocus />
+                <x-input-error :messages="$errors->get('email')" />
             </div>
 
             <!-- Password -->
             <div>
-                <label for="password">{{ __('Password') }}</label>
-
-                <input id="password" type="password" name="password" required>
+                <x-input-label for="password" :value="__('Password')" />
+                <x-text-input id="password" type="password" name="password" required />
             </div>
 
             <!-- Confirm Password -->
             <div>
-                <label for="password_confirmation">{{ __('Confirm Password') }}</label>
-
-                <input id="password_confirmation"
+                <x-input-label for="password_confirmation" :value="__('Confirm Password')"/>
+                <x-text-input id="password_confirmation"
                                     type="password"
-                                    name="password_confirmation" required>
+                                    name="password_confirmation" required />
             </div>
 
-            <div>
-                <button>
-                    {{ __('Reset Password') }}
-                </button>
-            </div>
+            <button>
+                {{ __('Reset Password') }}
+            </button>
         </form>
     @endcomponent
 @endcomponent

@@ -1,5 +1,6 @@
 @component('layouts.guest')
     @component('components.auth-card')
+        <h1>{{ __('Login') }}</h1>
         <!-- Session Status -->
         @include('includes.auth-session-status')
 
@@ -11,19 +12,18 @@
 
             <!-- Email Address -->
             <div>
-                <label for="email">{{ __('Email') }}</label>
-
-                <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+                <x-input-label for="email" :value=" __('Email')"/>
+                <x-text-input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
+                              autocomplete="username" />
             </div>
 
             <!-- Password -->
             <div>
-                <label for="password">{{ __('Password') }}</label>
-
-                <input id="password"
+                <x-input-label for="password" :value="__('Password')" />
+                <x-text-input id="password"
                                 type="password"
                                 name="password"
-                                required autocomplete="current-password">
+                                required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -35,15 +35,14 @@
             </div>
 
             <div>
-
-                <a href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-
                 <button>
                     {{ __('Login') }}
                 </button>
             </div>
+
+            <a href="{{ route('password.request') }}">
+                {{ __('Forgot your password?') }}
+            </a>
         </form>
     @endcomponent
 @endcomponent

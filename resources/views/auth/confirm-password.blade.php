@@ -4,6 +4,8 @@
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>
 
+        <h1>{{ __('Confirm password') }}</h1>
+
         <!-- Validation Errors -->
         @include('includes.auth-validation-errors')
 
@@ -12,19 +14,17 @@
 
             <!-- Password -->
             <div>
-                <label for="password">{{ __('Password') }}</label>
+                <x-input-label for="password" :value="__('Password')" />
 
-                <input id="password"
+                <x-text-input id="password"
                                 type="password"
                                 name="password"
-                                required autocomplete="current-password">
+                                required autocomplete="current-password" />
             </div>
 
-            <div>
-                <button>
-                    {{ __('Confirm') }}
-                </button>
-            </div>
+            <button>
+                {{ __('Confirm') }}
+            </button>
         </form>
     @endcomponent
 @endcomponent

@@ -1,5 +1,6 @@
 @component('layouts.guest')
     @component('components.auth-card')
+        <h1>{{__('Register')}}</h1>
 
         <!-- Validation Errors -->
         @include('includes.auth-validation-errors')
@@ -9,28 +10,22 @@
 
             <!-- Name -->
             <div>
-                <label for="first_name">{{ __('First Name') }}</label>
-
-                <input id="first_name"  type="text" name="first_name" value="{{ old('name') }}" required autofocus />
-            </div>
-            <div>
-                <label for="last_name">{{ __('Last Name') }}</label>
-
-                <input id="last_name"  type="text" name="last_name" value="{{ old('name') }}" required autofocus />
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+                <x-input-error :messages="$errors->get('name')" />
             </div>
 
             <!-- Email Address -->
             <div>
-                <label for="email">{{ __('Email') }}</label>
-
-                <input id="email"  type="email" name="email" value="{{ old('email') }}" required />
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email"  type="email" name="email" value="{{ old('email') }}" required />
+                <x-input-error :messages="$errors->get('email')" autocomplete="username" />
             </div>
 
             <!-- Password -->
             <div>
-                <label for="password">{{ __('Password') }}</label>
-
-                <input id="password"
+                <x-input-label for="password" :value="__('Password')" />
+                <x-text-input id="password"
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
@@ -38,22 +33,22 @@
 
             <!-- Confirm Password -->
             <div>
-                <label for="password_confirmation">{{ __('Confirm Password') }}</label>
-
-                <input id="password_confirmation"
+                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-text-input id="password_confirmation"
                                 type="password"
-                                name="password_confirmation" required />
+                                name="password_confirmation" required autocomplete="new-password" />
+                <x-input-error :messages="$errors->get('password')" />
             </div>
 
             <div>
-                <a href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
                 <button>
                     {{ __('Register') }}
                 </button>
             </div>
+
+            <a href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
         </form>
     @endcomponent
 @endcomponent
