@@ -28,3 +28,4 @@ For example:
     .version();
 ```
 
+You will also need to update your references to your CSS/JS files in the layouts instead of using the Vite ones. Simple!
