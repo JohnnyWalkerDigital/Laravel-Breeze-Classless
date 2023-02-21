@@ -18,8 +18,8 @@
             <!-- Email Address -->
             <div>
                 <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email"  type="email" name="email" value="{{ old('email') }}" required />
-                <x-input-error :messages="$errors->get('email')" autocomplete="username" />
+                <x-text-input id="email"  type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" />
             </div>
 
             <!-- Password -->
