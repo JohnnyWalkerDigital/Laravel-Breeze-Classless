@@ -6,7 +6,7 @@
         <!-- Validation Errors -->
         @include('includes.auth-validation-errors')
 
-        <form method="POST" action="{{ route('password.update') }}">
+        <form method="POST" action="{{ route('password.store') }}">
             @csrf
 
             <!-- Password Reset Token -->
